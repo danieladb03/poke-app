@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Header = styled.div`
-background: blue;
-`
+  background: blue;
+`;
 
 export default Header;

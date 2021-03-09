@@ -1,12 +1,13 @@
-import Container from "../core/Container"
-import SideBar from "../core/SideBar"
-import Header from "../core/Header"
+import Container from '../core/Container';
+import SideBar from '../core/SideBar';
 
 const Layout = ({children}) => {
-    return <Container>
-        <SideBar/>   
-        {children}
+  return (
+    <Container>
+      <SideBar />
+      {children}
     </Container>
+  );
 };
 
-export default Layout
+export default Layout;

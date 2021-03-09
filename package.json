@@ -17,13 +17,95 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**/**.js",
+    "lint:fix": "eslint --fix src/**/**.js"
+
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "plugin:prettier/recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "react",
+      "babel",
+      "prettier"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": [
+            "./src"
+          ]
+        }
+      }
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "jquery": true,
+      "jest": true
+    },
+    "globals": {},
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "useTabs": false,
+          "tabWidth": 2,
+          "bracketSpacing": false,
+          "trailingComma": "es5",
+          "printWidth": 80,
+          "semi": true,
+          "parser": "flow",
+          "singleQuote": true
+        }
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "object-curly-newline": [
+        "error",
+        {
+          "consistent": true
+        }
+      ],
+      "no-confusing-arrow": [
+        "error",
+        {
+          "allowParens": false
+        }
+      ],
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -36,5 +118,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "prettier-eslint": "^12.0.0"
   }
 }
