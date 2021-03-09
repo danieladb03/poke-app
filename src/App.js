@@ -1,11 +1,15 @@
 import { Route, Switch } from "wouter";
 import {Home} from './pages'
+import GlobalStyles from './GlobalStyles'
 
 function App() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-    </Switch>
+    <>
+      <GlobalStyles/>
+      <Switch>
+        <Route path="/" component={Home} />
+      </Switch>
+    </>
   );
 }
 
