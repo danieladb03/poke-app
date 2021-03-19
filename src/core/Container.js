@@ -4,6 +4,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: ${(props) => props.flexDirection};
   align-items: ${(props) => props.alignItems};
+  flex-wrap: ${(props) => props.flexWrap};
 `;
 
 export default Container;
