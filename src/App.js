@@ -1,6 +1,6 @@
-import {Route, Switch} from 'wouter';
-import {Home} from './pages';
-import GlobalStyles from './GlobalStyles';
+import {Route, Switch} from "wouter";
+import {Home} from "./pages";
+import GlobalStyles from "./GlobalStyles";
 
 function App() {
   return (

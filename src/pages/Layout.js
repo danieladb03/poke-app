@@ -1,5 +1,6 @@
-import Container from '../core/Container';
-import SideBar from '../core/SideBar';
+/* eslint-disable no-unused-vars */
+import Container from "../core/Container";
+import SideBar from "../core/SideBar";
 
 const Layout = ({children}) => {
   return (

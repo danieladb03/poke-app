@@ -1,7 +1,8 @@
-import styled from 'styled-components';
-import {H1, Subtitle} from './typography';
-import profileImg from '../assets/profile.png';
-import Container from './Container';
+/* eslint-disable no-unused-vars */
+import styled from "styled-components";
+import {H1, Subtitle} from "./typography";
+import profileImg from "../assets/profile.png";
+import Container from "./Container";
 
 const Wrapper = styled(Container)`
   background: #ff3d67;

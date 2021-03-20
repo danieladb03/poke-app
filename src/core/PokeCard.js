@@ -1,7 +1,8 @@
-import styled from 'styled-components';
-import Container from './Container';
-import pokeImg from '../assets/profile.png';
-import {Subtitle} from './typography';
+/* eslint-disable no-unused-vars */
+import styled from "styled-components";
+import Container from "./Container";
+// import pokeImg from '../assets/profile.png';
+import {Subtitle} from "./typography";
 
 const PokeImage = styled.img`
   width: 100%;
@@ -12,13 +13,12 @@ const PokeImage = styled.img`
 `;
 
 const PokeCard = ({pokemon}) => {
-  const urlArray = pokemon.url.split('/');
+  const urlArray = pokemon.url.split("/");
   const pokeId = urlArray[6];
-  console.log(urlArray);
   const pokeUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeId}.svg`;
   return (
     <Container
-      style={{width: '20%'}}
+      style={{width: "20%"}}
       flexDirection="column"
       alignItems="center"
     >
