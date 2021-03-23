@@ -29,8 +29,15 @@ const Home = () => {
     <Layout>
       <Wrapper flexDirection="column">
         <Header>
-          contenido
-          <input type="text" name="query" onChange={handleChange} />
+          <Container justifyContent="flex-end" alignItems="center">
+            <input
+              type="text"
+              name="query"
+              placeholder="Pokedex search"
+              onChange={handleChange}
+            />
+            <span class="material-icons md-light">search</span>
+          </Container>
         </Header>
         <PokeCardsWrapper flexWrap="wrap">
           {!isLoading &&
