@@ -29,7 +29,7 @@ const Home = () => {
     <Layout>
       <Wrapper flexDirection="column">
         <Header>
-          contenidoooo
+          contenido
           <input type="text" name="query" onChange={handleChange} />
         </Header>
         <PokeCardsWrapper flexWrap="wrap">
