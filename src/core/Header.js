@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Container from "../core/Container";
 
-const Header = styled.div`
+const Header = styled.header`
   background: #ffffff;
   position: fixed;
   width: calc(100% - 298px);
@@ -24,6 +24,7 @@ const Header = styled.div`
 
     span {
       padding-left: 8px;
+      margin-right: 50px;
       color: #c3bfbf;
     }
   }

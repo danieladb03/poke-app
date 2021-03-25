@@ -21,16 +21,40 @@ export const useFetchPokemons = (query = "") => {
     );
   }, [query, data]);
 
-  // include query param con default vacio
-  // useState para crear filteredPokemons
-  // useEffect se va a llamar cuando el query cambie
-  //    filtrar data, validar que data no sea null
-  //    resultado setear a filteredPokemons
-  // en lugar de devolver data devolver filteredPokemons
-
   return {
     pokemons: filteredPokemons || [],
     isLoading: !error && !data,
     isError: error,
+  };
+};
+// TODO incluir el useFetchPokemonSpecies en el resultado
+export const useFetchPokemon = (id) => {
+  const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
+  const {data, error} = useSWR(`pokemon/${id}`, fetcher);
+  console.log(data);
+  return {
+    pokemon: {
+      name: data?.name,
+      img,
+      stats: data?.stats,
+      characteristics: {
+        height: data?.height,
+        weight: data?.weight,
+        abilities: data?.abilities,
+        types: data?.types,
+      },
+    },
+    isLoading: !error && !data,
+    isError: error,
+  };
+};
+
+// TODO mover a su propio archivo endpoint 'poke-species'
+export const useFetchPokeSpecies = (id) => {
+  const {data, error} = useSWR(`pokemon-species/${id}`, fetcher);
+  return {
+    pokedescription: data?.flavor_text_entries,
+    pokecategory: data?.genera,
+    isLoading: !error && !data,
   };
 };

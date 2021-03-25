@@ -6,6 +6,10 @@ const Container = styled.div`
   align-items: ${(props) => props.alignItems};
   flex-wrap: ${(props) => props.flexWrap};
   justify-content: ${(props) => props.justifyContent};
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  margin: ${(props) => props.margin};
+  cursor: ${(props) => props.cursor};
 `;
 
 export default Container;

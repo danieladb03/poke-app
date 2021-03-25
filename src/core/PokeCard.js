@@ -3,28 +3,35 @@ import styled from "styled-components";
 import Container from "./Container";
 // import pokeImg from '../assets/profile.png';
 import {Subtitle} from "./typography";
+import {Link} from "wouter";
 
-const PokeImage = styled.img`
+export const PokeImage = styled.img`
   width: 100%;
-  height: 192px;
+  height: ${(props) => props.imageHeight};
   box-sizing: border-box;
   padding: 10px;
   margin: 10px;
 `;
+
+// TODO hacer border al hacer hover sobre el pokeCard
+// leer css box-sizing
 
 const PokeCard = ({pokemon}) => {
   const urlArray = pokemon.url.split("/");
   const pokeId = urlArray[6];
   const pokeUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeId}.svg`;
   return (
-    <Container
-      style={{width: "20%"}}
-      flexDirection="column"
-      alignItems="center"
-    >
-      <PokeImage src={pokeUrl}></PokeImage>
-      <Subtitle>{pokemon.name}</Subtitle>
-    </Container>
+    <Link href={`/poke-details/${pokeId}`}>
+      <Container
+        flexDirection="column"
+        alignItems="center"
+        width="20%"
+        cursor="pointer"
+      >
+        <PokeImage src={pokeUrl} imageHeight="192px"></PokeImage>
+        <Subtitle>{pokemon.name}</Subtitle>
+      </Container>
+    </Link>
   );
 };
 
