@@ -81,12 +81,11 @@ const StatBar = styled.div`
 `;
 
 const PokeDetails = ({params: {pokeId}}) => {
-  const isLoading = true;
-  const {pokemon, isLoading1, isError} = useFetchPokemon(pokeId);
+  const {pokemon, isLoading, isError} = useFetchPokemon(pokeId);
   const {
     pokedescription,
     pokecategory,
-    isLoading1: isLoadingDescription, // cambiando nombre de variable
+    isLoading: isLoadingDescription, // cambiando nombre de variable
   } = useFetchPokeSpecies(pokeId);
   // TODO mover al fetch
   const description = useMemo(() => {
