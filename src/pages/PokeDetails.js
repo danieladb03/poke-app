@@ -11,6 +11,7 @@ import {
 } from "../services/poke-api/pokemon";
 import {useMemo} from "react"; // para hacer cache de valores
 import {Link} from "wouter";
+import Loader from "../core/loader";
 
 const categoryImg = "https://cdn.bulbagarden.net/upload/";
 const cateogryUrls = {
@@ -80,11 +81,12 @@ const StatBar = styled.div`
 `;
 
 const PokeDetails = ({params: {pokeId}}) => {
-  const {pokemon, isLoading, isError} = useFetchPokemon(pokeId);
+  const isLoading = true;
+  const {pokemon, isLoading1, isError} = useFetchPokemon(pokeId);
   const {
     pokedescription,
     pokecategory,
-    isLoading: isLoadingDescription, // cambiando nombre de variable
+    isLoading1: isLoadingDescription, // cambiando nombre de variable
   } = useFetchPokeSpecies(pokeId);
   // TODO mover al fetch
   const description = useMemo(() => {
@@ -114,14 +116,28 @@ const PokeDetails = ({params: {pokeId}}) => {
             alignItems="center"
             justifyContent="center"
           >
-            <PokeImage
-              src={pokemon.img}
-              alt="Poke img"
-              imageHeight="170px"
-            ></PokeImage>
-            <BoldSubtitle color="#000000" textTransform="capitalize">
-              {pokemon.name}
-            </BoldSubtitle>
+            <Loader
+              isLoading={isLoading}
+              width={200}
+              height={200}
+              style={{marginBottom: "10px"}}
+            >
+              <PokeImage
+                src={pokemon.img}
+                alt="Poke img"
+                imageHeight="170px"
+              ></PokeImage>
+            </Loader>
+            <Loader
+              isLoading={isLoading}
+              width={200}
+              height={16}
+              style={{marginBottom: "10px"}}
+            >
+              <BoldSubtitle color="#000000" textTransform="capitalize">
+                {pokemon.name}
+              </BoldSubtitle>
+            </Loader>
           </Container>
           <Container
             style={{width: "50%"}}
@@ -133,14 +149,28 @@ const PokeDetails = ({params: {pokeId}}) => {
               justifyContent="center"
               margin="0px 60px"
             >
-              <BoldSubtitle
-                color="#000000"
-                textTransform="capitalize"
-                margin="15px 0px"
+              <Loader
+                isLoading={isLoading}
+                width={200}
+                height={16}
+                style={{marginBottom: "10px"}}
               >
-                About {pokemon.name}
-              </BoldSubtitle>
-              <TextContent color="#000000">{description}</TextContent>
+                <BoldSubtitle
+                  color="#000000"
+                  textTransform="capitalize"
+                  margin="15px 0px"
+                >
+                  About {pokemon.name}
+                </BoldSubtitle>
+              </Loader>
+              <Loader
+                isLoading={isLoading}
+                width={400}
+                height={32}
+                style={{marginBottom: "10px"}}
+              >
+                <TextContent color="#000000">{description}</TextContent>
+              </Loader>
             </Container>
           </Container>
           <PokeCharacteristics
@@ -163,10 +193,24 @@ const PokeDetails = ({params: {pokeId}}) => {
                 flexDirection="column"
                 alignItems="center"
               >
-                <Subtitle color="#787878">Height:</Subtitle>
-                <Subtitle color="#787878">
-                  {pokemon.characteristics.height}"
-                </Subtitle>
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  <Subtitle color="#787878">Height:</Subtitle>
+                </Loader>
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  <Subtitle color="#787878">
+                    {pokemon.characteristics.height}"
+                  </Subtitle>
+                </Loader>
               </Container>
               <Container
                 style={{width: "50%"}}
@@ -174,35 +218,77 @@ const PokeDetails = ({params: {pokeId}}) => {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Subtitle color="#787878">Category:</Subtitle>
-                <Subtitle color="#787878">{category}</Subtitle>
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  <Subtitle color="#787878">Category:</Subtitle>
+                </Loader>
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  <Subtitle color="#787878">{category}</Subtitle>
+                </Loader>
               </Container>
               <Container
                 style={{width: "50%"}}
                 flexDirection="column"
                 alignItems="center"
               >
-                <Subtitle color="#787878">Weight:</Subtitle>
-                <Subtitle color="#787878">
-                  {pokemon.characteristics.weight} lbs
-                </Subtitle>
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  <Subtitle color="#787878">Weight:</Subtitle>
+                </Loader>
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  <Subtitle color="#787878">
+                    {pokemon.characteristics.weight} lbs
+                  </Subtitle>
+                </Loader>
               </Container>
               <Container
                 style={{width: "50%"}}
                 flexDirection="column"
                 alignItems="center"
               >
-                <Subtitle color="#787878">Abilities:</Subtitle>
-                {!isLoading &&
-                  pokemon.characteristics.abilities.map((ability, k) => (
-                    <Subtitle
-                      key={k}
-                      color="#787878"
-                      textTransform="capitalize"
-                    >
-                      {ability.ability.name}
-                    </Subtitle>
-                  ))}
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  <Subtitle color="#787878">Abilities:</Subtitle>
+                </Loader>
+                <Loader
+                  isLoading={isLoading}
+                  width={70}
+                  height={14}
+                  style={{marginBottom: "10px"}}
+                >
+                  {!isLoading &&
+                    pokemon.characteristics.abilities.map((ability, k) => (
+                      <Subtitle
+                        key={k}
+                        color="#787878"
+                        textTransform="capitalize"
+                      >
+                        {ability.ability.name}
+                      </Subtitle>
+                    ))}
+                </Loader>
               </Container>
             </Container>
           </PokeCharacteristics>
@@ -217,19 +303,30 @@ const PokeDetails = ({params: {pokeId}}) => {
               alignItems="flex-end"
               justifyContent="center"
             >
-              {!isLoading &&
-                pokemon.stats.map((stat, k) => (
-                  <Container key={k} flexDirection="column" alignItems="center">
-                    <StatBar statHeight={`${stat.base_stat}px`}></StatBar>
-                    <BoldSubtitle
-                      className="StatLabel"
-                      color="#787878"
-                      textTransform="capitalize"
+              <Loader
+                isLoading={isLoading}
+                width={70}
+                height={14}
+                style={{marginBottom: "10px"}}
+              >
+                {!isLoading &&
+                  pokemon.stats.map((stat, k) => (
+                    <Container
+                      key={k}
+                      flexDirection="column"
+                      alignItems="center"
                     >
-                      {stat.stat.name}
-                    </BoldSubtitle>
-                  </Container>
-                ))}
+                      <StatBar statHeight={`${stat.base_stat}px`}></StatBar>
+                      <BoldSubtitle
+                        className="StatLabel"
+                        color="#787878"
+                        textTransform="capitalize"
+                      >
+                        {stat.stat.name}
+                      </BoldSubtitle>
+                    </Container>
+                  ))}
+              </Loader>
             </Container>
           </PokeStats>
         </PokeDetailsWrapper>
