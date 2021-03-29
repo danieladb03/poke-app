@@ -41,7 +41,13 @@ const Home = () => {
           </Container>
         </Header>
         <PokeCardsWrapper flexWrap="wrap">
-          <Loader count={10} width="200px" height="200px" isLoading={isLoading}>
+          <Loader
+            count={10}
+            width="192px"
+            height="200px"
+            isLoading={isLoading}
+            style={{margin: "6px"}}
+          >
             {pokemons?.map((pokemon, k) => (
               <PokeCard key={k} pokemon={pokemon} />
             ))}

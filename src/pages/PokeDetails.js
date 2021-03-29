@@ -81,7 +81,9 @@ const StatBar = styled.div`
 `;
 
 const PokeDetails = ({params: {pokeId}}) => {
-  const {pokemon, isLoading, isError} = useFetchPokemon(pokeId);
+  const {pokemon, isLoading: isLoadingPokemon, isError} = useFetchPokemon(
+    pokeId
+  );
   const {
     pokedescription,
     pokecategory,
@@ -95,9 +97,7 @@ const PokeDetails = ({params: {pokeId}}) => {
   const category = useMemo(() => {
     return pokecategory?.find((cate) => cate.language.name === "en")?.genus;
   }, [pokecategory]);
-  console.log("Pokemon", pokemon);
-  console.log("description", description);
-  console.log("category", category);
+  const isLoading = isLoadingDescription || isLoadingPokemon;
   return (
     <Layout>
       <Wrapper flexDirection="column">
