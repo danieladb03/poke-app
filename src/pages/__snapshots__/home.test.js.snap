@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home returns loading states when is loading 1`] = `
+<div
+  className="sc-bdfBwQ eXdLAz"
+>
+  <div
+    className="sc-bdfBwQ sc-iBPRYJ ea-DoiS bAbfSZ"
+  >
+    <h1
+      className="sc-dlfnbm gseDyA"
+      color="#FFFFFF"
+    >
+      Poke
+    </h1>
+    <img
+      className="sc-pFZIQ iFpWzT"
+      src="profile.png"
+    />
+    <p
+      className="sc-fubCfw drDFoG"
+    >
+      Daniela DB
+    </p>
+    <p
+      className="sc-hKgILt icNjze"
+      color="#FFFFFF"
+    >
+      Poke Master
+    </p>
+    <p
+      className="sc-hKgILt ewhALV"
+      color="#FFFFFF"
+    >
+      Lvl 25
+    </p>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-jrAGrp hZVvYV hiYJFV"
+  >
+    <header
+      className="sc-gsTCUz fNSlpe"
+    >
+      <div
+        className="sc-bdfBwQ blFYpd"
+      >
+        <input
+          name="query"
+          onChange={[Function]}
+          placeholder="Pokedex search"
+          type="text"
+        />
+        <span
+          className="material-icons md-light"
+        >
+          search
+        </span>
+      </div>
+    </header>
+    <div
+      className="sc-bdfBwQ sc-kEjbxe exVEDH hojsNo"
+    >
+      <span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="react-loading-skeleton css-1eg0sfo-skeletonStyles-Skeleton"
+          style={
+            Object {
+              "height": "200px",
+              "width": "200px",
+            }
+          }
+        >
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;

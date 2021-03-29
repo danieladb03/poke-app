@@ -27,6 +27,7 @@ const PokeCard = ({pokemon}) => {
         alignItems="center"
         width="20%"
         cursor="pointer"
+        data-testid="poke-card"
       >
         <PokeImage src={pokeUrl} imageHeight="192px"></PokeImage>
         <Subtitle>{pokemon.name}</Subtitle>

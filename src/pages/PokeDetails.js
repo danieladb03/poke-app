@@ -104,7 +104,7 @@ const PokeDetails = ({params: {pokeId}}) => {
         <Header>
           <Container justifyContent="flex-end" alignItems="center">
             <Link href="/">
-              <span class="material-icons md-light">arrow_back</span>
+              <span className="material-icons md-light">arrow_back</span>
             </Link>
           </Container>
         </Header>

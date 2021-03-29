@@ -6,6 +6,7 @@ import PokeCard from "../core/PokeCard";
 import Layout from "./Layout";
 import {useFetchPokemons} from "../services/poke-api/pokemon";
 import {useState} from "react";
+import Loader from "../core/loader";
 
 const pokeCards = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6];
 
@@ -36,14 +37,15 @@ const Home = () => {
               placeholder="Pokedex search"
               onChange={handleChange}
             />
-            <span class="material-icons md-light">search</span>
+            <span className="material-icons md-light">search</span>
           </Container>
         </Header>
         <PokeCardsWrapper flexWrap="wrap">
-          {!isLoading &&
-            pokemons.map((pokemon, k) => (
+          <Loader count={10} width="200px" height="200px" isLoading={isLoading}>
+            {pokemons?.map((pokemon, k) => (
               <PokeCard key={k} pokemon={pokemon} />
             ))}
+          </Loader>
         </PokeCardsWrapper>
       </Wrapper>
     </Layout>
