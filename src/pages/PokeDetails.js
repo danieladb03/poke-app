@@ -178,7 +178,7 @@ const PokeDetails = ({params: {pokeId}}) => {
             justifyContent="center"
             type={
               pokemon?.characteristics?.types &&
-              pokemon.characteristics.types[0].name
+              pokemon.characteristics.types[0].type.name
             }
           >
             <Container

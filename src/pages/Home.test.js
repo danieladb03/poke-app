@@ -62,7 +62,6 @@ describe("Home", () => {
 
     fireEvent.change(search, {target: {value: query}});
     expect(screen.queryAllByTestId("poke-card")).toHaveLength(2);
-    // console.log("useFetchPokemons.mock", useFetchPokemons.mock);
     expect(useFetchPokemons).toHaveBeenCalledWith(query);
   });
 });

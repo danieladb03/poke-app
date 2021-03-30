@@ -1,0 +1,464 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokeDetails no type 1`] = `
+<div
+  className="sc-bdfBwQ eXdLAz"
+>
+  <div
+    className="sc-bdfBwQ sc-jSgupP ea-DoiS eEPkuY"
+  >
+    <h1
+      className="sc-gsTCUz gveNNn"
+      color="#FFFFFF"
+    >
+      Poke
+    </h1>
+    <img
+      className="sc-iBPRYJ djjWhJ"
+      src="profile.png"
+    />
+    <p
+      className="sc-gKsewC cqGOif"
+    >
+      Daniela DB
+    </p>
+    <p
+      className="sc-dlfnbm kVIrGI"
+      color="#FFFFFF"
+    >
+      Poke Master
+    </p>
+    <p
+      className="sc-dlfnbm hrqAOj"
+      color="#FFFFFF"
+    >
+      Lvl 25
+    </p>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-jrAGrp hZVvYV hiYJFV"
+  >
+    <header
+      className="sc-fubCfw ePVVUN"
+    >
+      <div
+        className="sc-bdfBwQ blFYpd"
+      >
+        <span
+          className="material-icons md-light"
+          href="/"
+          onClick={[Function]}
+          to={null}
+        >
+          arrow_back
+        </span>
+      </div>
+    </header>
+    <div
+      className="sc-bdfBwQ sc-kEjbxe exVEDH hojsNo"
+    >
+      <div
+        className="sc-bdfBwQ fLYtOx"
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <img
+          alt="Poke img"
+          className="sc-pFZIQ hLbztS"
+          src="img"
+        />
+        <p
+          className="sc-hKgILt dzUNgq"
+          color="#000000"
+        >
+          daniela
+        </p>
+      </div>
+      <div
+        className="sc-bdfBwQ blZTAu"
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <div
+          className="sc-bdfBwQ fClFsI"
+        >
+          <p
+            className="sc-hKgILt gQPthW"
+            color="#000000"
+          >
+            About 
+            daniela
+          </p>
+          <p
+            className="sc-eCssSg iBbOBr"
+            color="#000000"
+          >
+            blablala
+          </p>
+        </div>
+      </div>
+      <div
+        className="sc-bdfBwQ sc-iqHYGH fxSYUT eUgsuE"
+      >
+        <div
+          className="sc-bdfBwQ cePUqa"
+          height="80%"
+          width="60%"
+        >
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Height:
+            </p>
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              height
+              "
+            </p>
+          </div>
+          <div
+            className="sc-bdfBwQ fLYtOx"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Category:
+            </p>
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              category
+            </p>
+          </div>
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Weight:
+            </p>
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              weight
+               lbs
+            </p>
+          </div>
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Abilities:
+            </p>
+            <p
+              className="sc-dlfnbm bTYniz"
+              color="#787878"
+            >
+              ability
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-bdfBwQ sc-crrsfI jeIypN bJdpfI"
+      >
+        <div
+          className="sc-bdfBwQ hdkJVZ"
+          style={
+            Object {
+              "height": "140px",
+              "width": "400px",
+            }
+          }
+        >
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+          >
+            <div
+              className="sc-dQppl dPqAHA"
+            />
+            <p
+              className="sc-hKgILt dgwuDt StatLabel"
+              color="#787878"
+            >
+              hp
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PokeDetails returns pokemon details 1`] = `
+<div
+  className="sc-bdfBwQ eXdLAz"
+>
+  <div
+    className="sc-bdfBwQ sc-jSgupP ea-DoiS eEPkuY"
+  >
+    <h1
+      className="sc-gsTCUz gveNNn"
+      color="#FFFFFF"
+    >
+      Poke
+    </h1>
+    <img
+      className="sc-iBPRYJ djjWhJ"
+      src="profile.png"
+    />
+    <p
+      className="sc-gKsewC cqGOif"
+    >
+      Daniela DB
+    </p>
+    <p
+      className="sc-dlfnbm kVIrGI"
+      color="#FFFFFF"
+    >
+      Poke Master
+    </p>
+    <p
+      className="sc-dlfnbm hrqAOj"
+      color="#FFFFFF"
+    >
+      Lvl 25
+    </p>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-jrAGrp hZVvYV hiYJFV"
+  >
+    <header
+      className="sc-fubCfw ePVVUN"
+    >
+      <div
+        className="sc-bdfBwQ blFYpd"
+      >
+        <span
+          className="material-icons md-light"
+          href="/"
+          onClick={[Function]}
+          to={null}
+        >
+          arrow_back
+        </span>
+      </div>
+    </header>
+    <div
+      className="sc-bdfBwQ sc-kEjbxe exVEDH hojsNo"
+    >
+      <div
+        className="sc-bdfBwQ fLYtOx"
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <img
+          alt="Poke img"
+          className="sc-pFZIQ hLbztS"
+          src="img"
+        />
+        <p
+          className="sc-hKgILt dzUNgq"
+          color="#000000"
+        >
+          daniela
+        </p>
+      </div>
+      <div
+        className="sc-bdfBwQ blZTAu"
+        style={
+          Object {
+            "width": "50%",
+          }
+        }
+      >
+        <div
+          className="sc-bdfBwQ fClFsI"
+        >
+          <p
+            className="sc-hKgILt gQPthW"
+            color="#000000"
+          >
+            About 
+            daniela
+          </p>
+          <p
+            className="sc-eCssSg iBbOBr"
+            color="#000000"
+          >
+            blablala
+          </p>
+        </div>
+      </div>
+      <div
+        className="sc-bdfBwQ sc-iqHYGH fxSYUT cfXoQn"
+        type="type"
+      >
+        <div
+          className="sc-bdfBwQ cePUqa"
+          height="80%"
+          width="60%"
+        >
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Height:
+            </p>
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              height
+              "
+            </p>
+          </div>
+          <div
+            className="sc-bdfBwQ fLYtOx"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Category:
+            </p>
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              category
+            </p>
+          </div>
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Weight:
+            </p>
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              weight
+               lbs
+            </p>
+          </div>
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+            style={
+              Object {
+                "width": "50%",
+              }
+            }
+          >
+            <p
+              className="sc-dlfnbm bHRgVr"
+              color="#787878"
+            >
+              Abilities:
+            </p>
+            <p
+              className="sc-dlfnbm bTYniz"
+              color="#787878"
+            >
+              ability
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-bdfBwQ sc-crrsfI jeIypN bJdpfI"
+      >
+        <div
+          className="sc-bdfBwQ hdkJVZ"
+          style={
+            Object {
+              "height": "140px",
+              "width": "400px",
+            }
+          }
+        >
+          <div
+            className="sc-bdfBwQ ea-DoiS"
+          >
+            <div
+              className="sc-dQppl dPqAHA"
+            />
+            <p
+              className="sc-hKgILt dgwuDt StatLabel"
+              color="#787878"
+            >
+              hp
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

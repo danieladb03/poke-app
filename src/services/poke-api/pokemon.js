@@ -27,11 +27,11 @@ export const useFetchPokemons = (query = "") => {
     isError: error,
   };
 };
+
 // TODO incluir el useFetchPokemonSpecies en el resultado
 export const useFetchPokemon = (id) => {
   const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
   const {data, error} = useSWR(`pokemon/${id}`, fetcher);
-  console.log(data);
   return {
     pokemon: {
       name: data?.name,
