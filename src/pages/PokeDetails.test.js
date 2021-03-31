@@ -13,7 +13,7 @@ describe("PokeDetails", () => {
   const expectedWeight = "weight";
   const expectedAbility = "ability";
   const expectedStat = "hp";
-  const pokeResponse = {
+  const pokemonResp = {
     pokemon: {
       name: "daniela",
       img: "img",
@@ -28,7 +28,7 @@ describe("PokeDetails", () => {
   };
   const expectedDescription = "blablala";
   const expectedCategory = "category";
-  const pokeDescResponse = {
+  const pokemonDescResp = {
     pokedescription: [
       {flavor_text: expectedDescription, language: {name: "en"}},
     ],
@@ -37,16 +37,16 @@ describe("PokeDetails", () => {
 
   test("returns pokemon details", () => {
     const params = {pokeId: 1};
-    useFetchPokemon.mockReturnValue(pokeResponse);
-    useFetchPokeSpecies.mockReturnValue(pokeDescResponse);
+    useFetchPokemon.mockReturnValue(pokemonResp);
+    useFetchPokeSpecies.mockReturnValue(pokemonDescResp);
     render(<PokeDetails params={params} />);
-    const pokeName = screen.getByText(pokeResponse.pokemon.name);
+    const pokeName = screen.getByText(pokemonResp.pokemon.name);
 
     const tree = renderer.create(<PokeDetails params={params} />).toJSON();
     expect(tree).toMatchSnapshot();
 
     expect(pokeName).toBeTruthy();
-    expect(screen.getByText(`About ${pokeResponse.pokemon.name}`)).toBeTruthy();
+    expect(screen.getByText(`About ${pokemonResp.pokemon.name}`)).toBeTruthy();
     expect(screen.getByText(expectedDescription)).toBeTruthy();
     expect(screen.getByText(`${expectedHeight}"`)).toBeTruthy();
     expect(screen.getByText(`${expectedCategory}`)).toBeTruthy();
@@ -57,7 +57,7 @@ describe("PokeDetails", () => {
 
   test("no type", () => {
     const params = {pokeId: 1};
-    const resp = {
+    const noTypePokemonResp = {
       pokemon: {
         name: "daniela",
         img: "img",
@@ -70,8 +70,8 @@ describe("PokeDetails", () => {
         stats: [{base_stat: "38", stat: {name: expectedStat}}],
       },
     };
-    useFetchPokemon.mockReturnValue(resp);
-    useFetchPokeSpecies.mockReturnValue(pokeDescResponse);
+    useFetchPokemon.mockReturnValue(noTypePokemonResp);
+    useFetchPokeSpecies.mockReturnValue(pokemonDescResp);
     render(<PokeDetails params={params} />);
 
     const tree = renderer.create(<PokeDetails params={params} />).toJSON();

@@ -9,7 +9,7 @@ import renderer from "react-test-renderer";
 jest.mock("../services/poke-api/pokemon");
 
 describe("Home", () => {
-  const firstResponse = {
+  const pokemonsResp = {
     pokemons: [
       {name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"},
       {name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"},
@@ -18,7 +18,7 @@ describe("Home", () => {
     ],
     isLoading: false,
   };
-  const secondResponse = {
+  const filteredPokemonsResp = {
     pokemons: [
       {name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"},
       {name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/"},
@@ -27,11 +27,11 @@ describe("Home", () => {
   };
 
   test("returns pokemon cards", () => {
-    useFetchPokemons.mockReturnValue(firstResponse);
+    useFetchPokemons.mockReturnValue(pokemonsResp);
     render(<Home />);
     const pokemons = screen.getAllByTestId("poke-card");
 
-    expect(pokemons).toHaveLength(firstResponse.pokemons.length);
+    expect(pokemons).toHaveLength(pokemonsResp.pokemons.length);
     expect(useFetchPokemons.mock.calls.length).toBe(1);
   });
 
@@ -51,8 +51,8 @@ describe("Home", () => {
 
   test("returns query search", () => {
     useFetchPokemons
-      .mockReturnValueOnce(firstResponse)
-      .mockReturnValue(secondResponse);
+      .mockReturnValueOnce(pokemonsResp)
+      .mockReturnValue(filteredPokemonsResp);
     render(<Home />);
     const search = screen.getByRole("textbox");
     const query = "char";

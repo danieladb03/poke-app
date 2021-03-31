@@ -13,8 +13,8 @@ import {useMemo} from "react"; // para hacer cache de valores
 import {Link} from "wouter";
 import Loader from "../core/loader";
 
-const categoryImg = "https://cdn.bulbagarden.net/upload/";
-const cateogryUrls = {
+const typeImg = "https://cdn.bulbagarden.net/upload/";
+const typeUrls = {
   normal: "9/95/Normal_icon_SwSh.png",
   fighting: "3/3b/Fighting_icon_SwSh.png",
   flying: "b/b5/Flying_icon_SwSh.png",
@@ -36,9 +36,9 @@ const cateogryUrls = {
   unknown: "5/56/UnknownIC_PBR.png",
   shadow: "5/56/UnknownIC_PBR.png",
 };
-const getCategoryUrl = (type) => {
+const getTypeUrl = (type) => {
   if (!type) return "";
-  return `${categoryImg}${cateogryUrls[type] || cateogryUrls.unknown}`;
+  return `${typeImg}${typeUrls[type] || typeUrls.unknown}`;
 };
 
 const Wrapper = styled(Container)`
@@ -54,7 +54,7 @@ const PokeDetailsWrapper = styled(Container)`
 
 const PokeCharacteristics = styled(Container)`
   width: 50%;
-  background: url(${(props) => getCategoryUrl(props.type)}) no-repeat center;
+  background: url(${(props) => getTypeUrl(props.type)}) no-repeat center;
   background-size: 70px 70px;
 `;
 
@@ -98,6 +98,7 @@ const PokeDetails = ({params: {pokeId}}) => {
     return pokecategory?.find((cate) => cate.language.name === "en")?.genus;
   }, [pokecategory]);
   const isLoading = isLoadingDescription || isLoadingPokemon;
+
   return (
     <Layout>
       <Wrapper flexDirection="column">
@@ -138,6 +139,7 @@ const PokeDetails = ({params: {pokeId}}) => {
               </BoldSubtitle>
             </Loader>
           </Container>
+
           <Container
             style={{width: "50%"}}
             flexDirection="column"
@@ -172,6 +174,7 @@ const PokeDetails = ({params: {pokeId}}) => {
               </Loader>
             </Container>
           </Container>
+
           <PokeCharacteristics
             alignItems="center"
             flexWrap="wrap"
@@ -291,6 +294,7 @@ const PokeDetails = ({params: {pokeId}}) => {
               </Container>
             </Container>
           </PokeCharacteristics>
+
           <PokeStats
             flexDirection="column"
             alignItems="center"

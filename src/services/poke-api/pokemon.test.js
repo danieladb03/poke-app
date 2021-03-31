@@ -17,27 +17,27 @@ const Test = ({query}) => {
 
 describe("pokemon", () => {
   describe("useFetchPokemons", () => {
-    const expectedContent = "Pikachu";
-    const expectedContent2 = "Charizard";
-    const returnValue = {results: [{name: expectedContent}]}; // fixture
-    const returnMultipleValues = {
-      results: [{name: expectedContent}, {name: expectedContent2}],
+    const expectedFirstPokemon = "Pikachu";
+    const expectedSecondPokemon = "Charizard";
+    const pokemonsResponse = {results: [{name: expectedFirstPokemon}]}; // fixture
+    const pokemonsMultipleResponse = {
+      results: [{name: expectedFirstPokemon}, {name: expectedSecondPokemon}],
     };
 
     test("returns response successfully", async () => {
-      fetcher.mockResolvedValue(returnValue);
+      fetcher.mockResolvedValue(pokemonsResponse);
       render(
         <SWRConfig value={{dedupingInterval: 0}}>
           <Test />
         </SWRConfig>
       );
 
-      expect(await screen.findByText(expectedContent)).toBeTruthy();
+      expect(await screen.findByText(expectedFirstPokemon)).toBeTruthy();
     });
 
     test("returns query search", async () => {
       fetcher.mockReset();
-      fetcher.mockResolvedValue(returnMultipleValues);
+      fetcher.mockResolvedValue(pokemonsMultipleResponse);
       const query = "Pika";
       const {rerender} = render(
         <SWRConfig value={{dedupingInterval: 0}}>
@@ -46,21 +46,23 @@ describe("pokemon", () => {
       );
 
       expect(
-        await screen.findByText(`${expectedContent},${expectedContent2}`)
+        await screen.findByText(
+          `${expectedFirstPokemon},${expectedSecondPokemon}`
+        )
       ).toBeTruthy();
       rerender(
         <SWRConfig value={{dedupingInterval: 0}}>
           <Test query={query} />
         </SWRConfig>
       );
-      expect(await screen.findByText(expectedContent)).toBeTruthy();
+      expect(await screen.findByText(expectedFirstPokemon)).toBeTruthy();
     });
   });
 
   describe("useFetchPokemon", () => {
-    const expectedPokeName = "Pikachu";
+    const expectedPokemon = "Pikachu";
     const expectedId = 1;
-    const pokemonResponse = {name: expectedPokeName};
+    const pokemonResponse = {name: expectedPokemon};
     const TestPokemon = ({id}) => {
       const {pokemon} = useFetchPokemon(id);
       return <div>{pokemon.name}</div>;
@@ -74,7 +76,7 @@ describe("pokemon", () => {
         </SWRConfig>
       );
 
-      expect(await screen.findByText(expectedPokeName)).toBeTruthy();
+      expect(await screen.findByText(expectedPokemon)).toBeTruthy();
       expect(fetcher).toHaveBeenCalledWith(`pokemon/${expectedId}`);
     });
   });

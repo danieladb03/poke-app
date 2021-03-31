@@ -32,6 +32,7 @@ export const useFetchPokemons = (query = "") => {
 export const useFetchPokemon = (id) => {
   const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
   const {data, error} = useSWR(`pokemon/${id}`, fetcher);
+
   return {
     pokemon: {
       name: data?.name,
@@ -52,6 +53,7 @@ export const useFetchPokemon = (id) => {
 // TODO mover a su propio archivo endpoint 'poke-species'
 export const useFetchPokeSpecies = (id) => {
   const {data, error} = useSWR(`pokemon-species/${id}`, fetcher);
+
   return {
     pokedescription: data?.flavor_text_entries,
     pokecategory: data?.genera,
